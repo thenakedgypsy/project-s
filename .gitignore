@@ -3,5 +3,7 @@
 /android/
 Assets/
 Prefabs/
-
+Scenes/
+*.svg
+*.godot
 
