@@ -14,6 +14,8 @@ public partial class StarSystem : Area2D
 	public delegate void SystemSelectedEventHandler(Vector2 systemPosition, StarSystem self);
 	[Signal]
 	public delegate void ArrivedInSystemEventHandler(StarSystem system);
+	[Signal]
+	public delegate void PostEventToWindowEventHandler(Event eventToPost);
 
 	public StarSystem()
 	{
@@ -25,7 +27,8 @@ public partial class StarSystem : Area2D
 	{
 		IsScanned = false;
 		_systemSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-		_mouseOver = false;		
+		_mouseOver = false;	
+		ConnectToEventViewer();	
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -81,9 +84,8 @@ public partial class StarSystem : Area2D
 
 	public void SystemScanned()
 	{
-
 		GenerateType();
-	
+
 	}
 
 	public void GenerateType()
@@ -100,8 +102,9 @@ public partial class StarSystem : Area2D
 		if(typeInt == 1)
 		{
 			SetType("DeadStar");
-			GD.Print("Setting type to Dead");
+			GD.Print("Setting type to Dead Star");
 		}
+		ShowEvent();
 	}
 
 	public void SetType(string type)
@@ -113,6 +116,34 @@ public partial class StarSystem : Area2D
 	public void SetSprite()
 	{
 		_systemSprite.Animation = Type;
+	}
+
+	public void ShowEvent()
+	{
+		Event eventToPost = EventBank.Instance.RollEvent(Type);
+		EmitSignal(nameof(PostEventToWindow), eventToPost);
+	}
+
+	public void ConnectToEventViewer()
+	{
+		var eventWindowGroup = GetTree().GetNodesInGroup("EventWindow");
+		if(eventWindowGroup.Count > 0)
+		{
+			var eventWindow = eventWindowGroup[0] as EventWindow;
+			if(eventWindow != null)
+			{
+				PostEventToWindow += eventWindow.LoadEvent;
+				GD.Print($"Connected System {this} to EventWindow");
+			}
+			else
+			{
+				GD.Print("Event window group item found but is not type EventWindow");
+			}
+		}
+		else
+		{
+			GD.Print("EventWindow not found");
+		}
 	}
 
 

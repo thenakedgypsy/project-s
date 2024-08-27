@@ -32,6 +32,7 @@ project/assembly_name="Project S"
 [global_group]
 
 Player="to reference the player easily in code"
+EventWindow="event window group"
 
 [input]
 

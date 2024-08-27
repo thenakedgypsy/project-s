@@ -81,7 +81,7 @@ public partial class TravelButton : Area2D
 		Visible = false;
 	}
 
-		public void ConnectToPlayer()
+	public void ConnectToPlayer()
 	{
 		var playerGroup = GetTree().GetNodesInGroup("Player");
 		if(playerGroup.Count > 0)
