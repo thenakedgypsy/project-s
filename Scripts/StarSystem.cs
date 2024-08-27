@@ -7,27 +7,25 @@ public partial class StarSystem : Area2D
 	private bool _mouseOver;
 	public string ID;
 	public string Type;
+	private AnimatedSprite2D _systemSprite;
+	public bool IsScanned;
 
 	[Signal]
 	public delegate void SystemSelectedEventHandler(Vector2 systemPosition, StarSystem self);
+	[Signal]
+	public delegate void ArrivedInSystemEventHandler(StarSystem system);
 
 	public StarSystem()
 	{
-		this.Type = "Dead_Star";
-	}
-
-	public StarSystem(string type)
-	{
-		Type = type;
-		SetSprite(Type);
+		this.Type = "";
 	}
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_mouseOver = false;
-		SetSprite(Type);
-		
+		IsScanned = false;
+		_systemSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		_mouseOver = false;		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -70,20 +68,51 @@ public partial class StarSystem : Area2D
 		}	
 	}
 
-	public void SetType(string type)
-	{
-		Type = type;
-		SetSprite(Type);
-	}
-
-	public void SetSprite(string type)
-	{
-
-	}
-
 	public void PlayerArrivedAtSystem()
 	{
 		GD.Print($"From System: Player Arrived at System {this} at {GlobalPosition}");
+		ShowScanButton();
+	}
+
+	public void ShowScanButton()
+	{
+		EmitSignal(nameof(ArrivedInSystem), this);
+	}
+
+	public void SystemScanned()
+	{
+
+		GenerateType();
+	
+	}
+
+	public void GenerateType()
+	{
+		GD.Print("Generating a type for this star system...");
+		Random random = new Random();
+		int typeInt = random.Next(2); //0 - 1
+		GD.Print($"Random int is: {typeInt}");
+		if(typeInt == 0)
+		{
+			SetType("Belt");
+			GD.Print("Setting type to belt");
+		}
+		if(typeInt == 1)
+		{
+			SetType("DeadStar");
+			GD.Print("Setting type to Dead");
+		}
+	}
+
+	public void SetType(string type)
+	{
+		Type = type;
+		SetSprite();
+	}
+
+	public void SetSprite()
+	{
+		_systemSprite.Animation = Type;
 	}
 
 
