@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 StateManager="*res://Scripts/Singletons/StateManager.cs"
 EventBank="*res://Scripts/Singletons/EventBank.cs"
+ResourceManager="*res://Scripts/Singletons/ResourceManager.cs"
 
 [display]
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cavqrwshjbj82"]
+[gd_scene load_steps=6 format=3 uid="uid://cavqrwshjbj82"]
 
 [ext_resource type="PackedScene" uid="uid://1nql8syso6ok" path="res://Prefabs/Background.tscn" id="1_dbjhr"]
 [ext_resource type="PackedScene" uid="uid://cffpplecbqj0l" path="res://Prefabs/PlayerShip.tscn" id="2_b7ioy"]
 [ext_resource type="PackedScene" uid="uid://c8qqtyxe3t4nh" path="res://Prefabs/StarSystem.tscn" id="3_hmyw2"]
 [ext_resource type="PackedScene" uid="uid://5nk8mqdrlqre" path="res://Prefabs/EventWindow.tscn" id="4_3uehk"]
+[ext_resource type="PackedScene" uid="uid://ty3x5sgpv4l4" path="res://Prefabs/FuelTracker.tscn" id="5_2afbo"]
 
 [node name="Galaxy" type="Node2D"]
 
@@ -93,6 +94,8 @@ position = Vector2(-708, -758)
 position = Vector2(-542, -497)
 
 [node name="EventWindow" parent="." instance=ExtResource("4_3uehk")]
+
+[node name="FuelTracker" parent="." instance=ExtResource("5_2afbo")]
 
 [connection signal="ArrivedInSystem" from="StarSystem" to="StarSystem/ScanButton" method="ArrivedInSystem"]
 [connection signal="ArrivedInSystem" from="StarSystem2" to="StarSystem2/ScanButton" method="ArrivedInSystem"]
