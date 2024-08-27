@@ -5,7 +5,8 @@ public partial class StarSystem : Area2D
 {
 
 	private bool _mouseOver;
-	public string Type {get;set;}
+	public string ID;
+	public string Type;
 
 	[Signal]
 	public delegate void SystemSelectedEventHandler(Vector2 systemPosition);
@@ -18,6 +19,7 @@ public partial class StarSystem : Area2D
 	public StarSystem(string type)
 	{
 		Type = type;
+		SetSprite(Type);
 	}
 
 	// Called when the node enters the scene tree for the first time.
@@ -66,6 +68,12 @@ public partial class StarSystem : Area2D
 			GD.Print($"Current: {StateManager.Instance.State}");
 			GD.Print("Wanted: SystemSelection");
 		}	
+	}
+
+	public void SetType(string type)
+	{
+		Type = type;
+		SetSprite(Type);
 	}
 
 	public void SetSprite(string type)

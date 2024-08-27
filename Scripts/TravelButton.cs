@@ -11,6 +11,7 @@ public partial class TravelButton : Area2D
 	private Texture2D _selectedTexture;
 	private Texture2D _unSelectedTexture;
 	private bool _justAppeared;
+	private StarSystem _attachedSystem;
 
 	[Signal]
 	public delegate void TravelClickedEventHandler(Vector2 destination);
@@ -32,8 +33,9 @@ public partial class TravelButton : Area2D
 		CheckClick();
 	}
 
-	public void SystemClicked(Vector2 systemPos)
+	public void SystemClicked(Vector2 systemPos, StarSystem attached)
 	{
+		_attachedSystem = attached;
 		_systemPosition = systemPos;
 		Visible = true;	
 		_justAppeared = true;	
@@ -71,8 +73,6 @@ public partial class TravelButton : Area2D
 		}
 		
 	}
-
-		
 
 	public void Clicked()
 	{
