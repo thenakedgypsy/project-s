@@ -14,7 +14,7 @@ public partial class TravelButton : Area2D
 	private StarSystem _attachedSystem;
 
 	[Signal]
-	public delegate void TravelClickedEventHandler(Vector2 destination);
+	public delegate void TravelClickedEventHandler(Vector2 destination, StarSystem attached);
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -77,7 +77,7 @@ public partial class TravelButton : Area2D
 	public void Clicked()
 	{
 		GD.Print("Travel clicked emitting signal to player");
-		EmitSignal(nameof(TravelClicked), _systemPosition);
+		EmitSignal(nameof(TravelClicked), _systemPosition, _attachedSystem);
 		Visible = false;
 	}
 

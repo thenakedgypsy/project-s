@@ -9,7 +9,7 @@ public partial class StarSystem : Area2D
 	public string Type;
 
 	[Signal]
-	public delegate void SystemSelectedEventHandler(Vector2 systemPosition);
+	public delegate void SystemSelectedEventHandler(Vector2 systemPosition, StarSystem self);
 
 	public StarSystem()
 	{
@@ -60,7 +60,7 @@ public partial class StarSystem : Area2D
 		if(StateManager.Instance.State == "SystemSelection")
 		{
 			GD.Print($"System Clicked! Emitting Signal to Travel button with Position {this.GlobalPosition}");
-			EmitSignal(nameof(SystemSelected), this.GlobalPosition);
+			EmitSignal(nameof(SystemSelected), this.GlobalPosition, this);
 		}
 		else
 		{
@@ -79,6 +79,11 @@ public partial class StarSystem : Area2D
 	public void SetSprite(string type)
 	{
 
+	}
+
+	public void PlayerArrivedAtSystem()
+	{
+		GD.Print($"From System: Player Arrived at System {this} at {GlobalPosition}");
 	}
 
 
