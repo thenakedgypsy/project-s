@@ -31,6 +31,7 @@ public partial class StarSystem : Area2D
 		_mouseOver = false;	
 		Light = GetNode<PointLight2D>("PointLight2D");
 		Light.Color = Color.FromHtml("a8e2ec");
+		Light.Enabled = false;
 		ConnectToEventViewer();	
 	}
 
@@ -118,6 +119,7 @@ public partial class StarSystem : Area2D
 
 	public void SetLightingByType()
 	{
+		Light.Enabled = true;
 		if(Type == "Belt")
 		{
 			Light.Color = Color.FromHtml("723a0e");

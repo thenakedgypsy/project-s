@@ -9,8 +9,16 @@
 
 [node name="Galaxy" type="Node2D"]
 
+[node name="Background" parent="." instance=ExtResource("1_dbjhr")]
+z_index = -1
+offset_left = -480.0
+offset_top = 267.0
+offset_right = 3520.0
+offset_bottom = 4267.0
+scale = Vector2(3.85538, 2.88386)
+
 [node name="PlayerShip" parent="." instance=ExtResource("2_b7ioy")]
-position = Vector2(5001, 3701)
+position = Vector2(6992, 6348)
 
 [node name="EventWindow" parent="." instance=ExtResource("4_3uehk")]
 
@@ -19,133 +27,7 @@ position = Vector2(5001, 3701)
 [node name="MoraleTracker" parent="." instance=ExtResource("6_ppkfe")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.316996, 0.590228, 0.845627, 1)
-
-[node name="Background" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = -1859.0
-offset_top = -1527.0
-offset_right = 2141.0
-offset_bottom = 2473.0
-
-[node name="Background2" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 5840.0
-offset_top = 3533.0
-offset_right = 9840.0
-offset_bottom = 7533.0
-
-[node name="Background3" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 5970.0
-offset_top = -40.0
-offset_right = 9970.0
-offset_bottom = 3960.0
-
-[node name="Background4" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 2024.0
-offset_top = -1403.0
-offset_right = 6024.0
-offset_bottom = 2597.0
-
-[node name="Background5" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = -1944.0
-offset_top = 2213.0
-offset_right = 2056.0
-offset_bottom = 6213.0
-
-[node name="Background6" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 3617.0
-offset_top = 5969.0
-offset_right = 7617.0
-offset_bottom = 9969.0
-
-[node name="Background7" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 2001.0
-offset_top = 2539.0
-offset_right = 6001.0
-offset_bottom = 6539.0
-
-[node name="Background8" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 67.0
-offset_top = 2772.0
-offset_right = 4067.0
-offset_bottom = 6772.0
-
-[node name="Background9" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 14.0
-offset_top = 6032.0
-offset_right = 4014.0
-offset_bottom = 10032.0
-
-[node name="Background10" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 9772.0
-offset_top = -72.0
-offset_right = 13772.0
-offset_bottom = 3928.0
-
-[node name="Background11" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 9729.0
-offset_top = 3804.0
-offset_right = 13729.0
-offset_bottom = 7804.0
-
-[node name="Background12" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 7434.0
-offset_top = 7495.0
-offset_right = 11434.0
-offset_bottom = 11495.0
-
-[node name="Background13" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 11260.0
-offset_top = 7746.0
-offset_right = 15260.0
-offset_bottom = 11746.0
-
-[node name="Background14" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = -73.0
-offset_top = 9973.0
-offset_right = 3927.0
-offset_bottom = 13973.0
-
-[node name="Background15" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 3663.0
-offset_top = 9884.0
-offset_right = 7663.0
-offset_bottom = 13884.0
-
-[node name="Background16" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 7380.0
-offset_top = 10853.0
-offset_right = 11380.0
-offset_bottom = 14853.0
-
-[node name="Background17" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 11242.0
-offset_top = 10602.0
-offset_right = 15242.0
-offset_bottom = 14602.0
-
-[node name="Background18" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 13541.0
-offset_top = 4047.0
-offset_right = 17541.0
-offset_bottom = 8047.0
-
-[node name="Background19" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 13469.0
-offset_top = 652.0
-offset_right = 17469.0
-offset_bottom = 4652.0
-
-[node name="Background20" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 13738.0
-offset_top = 7657.0
-offset_right = 17738.0
-offset_bottom = 11657.0
-
-[node name="Background21" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 13864.0
-offset_top = 10925.0
-offset_right = 17864.0
-offset_bottom = 14925.0
+color = Color(0.6701, 0.814045, 0.958432, 1)
 
 [node name="SystemSpawner" parent="." instance=ExtResource("1_w3gfw")]
 position = Vector2(0, -11)

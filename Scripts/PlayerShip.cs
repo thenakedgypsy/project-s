@@ -16,10 +16,14 @@ public partial class PlayerShip : Node2D
 	private Vector2 _selectionZoom;
 	private Vector2 _eventZoom;
 	private Camera2D _camera;
+	private PointLight2D _engineLight;
+	private AnimatedSprite2D _sprite;
 	// Called when the node enters the scene tree for the first time.
 	
 	public override void _Ready()
 	{
+		_sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		_engineLight = GetNode<PointLight2D>("AnimatedSprite2D/PointLight2D");
 		_selectionZoom = new Vector2(0.75f, 0.75f);
 		_eventZoom = new Vector2(1.5f,1.5f);
 		_camera = GetNode<Camera2D>("Camera2D");
@@ -57,27 +61,34 @@ public partial class PlayerShip : Node2D
 
 	public void MoveToSystem()		//move the ship to the destination system 
 	{
-		Vector2 currentPosition = GlobalPosition;
-		Vector2 direction = (_destination - currentPosition).Normalized();
-		Vector2 movement = direction * _moveSpeed * (float)GetProcessDeltaTime();
-		GlobalPosition = GlobalPosition.MoveToward(_destination, movement.Length());
-		if (movement != Vector2.Zero) //still in motion
-    	{
-    	    Rotation = Mathf.Atan2(movement.Y, movement.X);
-			if(_currentTime - _lastUpdateTime >= _updateFrequency)
-			{
-				_lastUpdateTime = _currentTime;
-				ResourceManager.Instance.Fuel -= 1;
-			}
-    	}
-		else if(_destinationSystem != null)	//has arrived at destination
+		if(ResourceManager.Instance.Fuel > 0)
 		{
-			GD.Print($"Destination {_destination} Reached! New Position: {GlobalPosition}");
-			_atDestination = true;
-			_currentSystem = _destinationSystem;
-			_destinationSystem = null;
-			GD.Print($"Now orbiting system: {_currentSystem}");
-			_currentSystem.PlayerArrivedAtSystem();
+			Vector2 currentPosition = GlobalPosition;
+			Vector2 direction = (_destination - currentPosition).Normalized();
+			Vector2 movement = direction * _moveSpeed * (float)GetProcessDeltaTime();
+			GlobalPosition = GlobalPosition.MoveToward(_destination, movement.Length());
+			if (movement != Vector2.Zero) //still in motion
+    		{
+				_sprite.Animation = "moving";
+				_engineLight.Enabled = true;
+    		    Rotation = Mathf.Atan2(movement.Y, movement.X);
+				if(_currentTime - _lastUpdateTime >= _updateFrequency)
+				{
+					_lastUpdateTime = _currentTime;
+					ResourceManager.Instance.Fuel -= 1;
+				}
+    		}
+			else if(_destinationSystem != null)	//has arrived at destination
+			{
+				_sprite.Animation = "waiting";
+				_engineLight.Enabled = false;
+				GD.Print($"Destination {_destination} Reached! New Position: {GlobalPosition}");
+				_atDestination = true;
+				_currentSystem = _destinationSystem;
+				_destinationSystem = null;
+				GD.Print($"Now orbiting system: {_currentSystem}");
+				_currentSystem.PlayerArrivedAtSystem();
+			}
 		}
 	}
 
