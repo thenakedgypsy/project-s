@@ -89,7 +89,9 @@ public partial class EventBank : Node
             var choiceA = new Choice(currentEvent.Choice1Text, currentEvent.Choice1Effects);
             var choiceB = new Choice(currentEvent.Choice2Text, currentEvent.Choice2Effects);
 
-            var newEvent = new Event(currentEvent.Type, currentEvent.Title, currentEvent.Body, choiceA, choiceB);
+            string title = "[center]" + currentEvent.Title;
+
+            var newEvent = new Event(currentEvent.Type, title, currentEvent.Body, choiceA, choiceB);
 
             
             //after parse add it to the appropriate bank

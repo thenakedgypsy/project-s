@@ -16,7 +16,7 @@ offset_right = 2286.0
 offset_bottom = 2558.0
 
 [node name="PlayerShip" parent="." instance=ExtResource("2_b7ioy")]
-position = Vector2(202, 521)
+position = Vector2(168, 582)
 
 [node name="StarSystem" parent="." instance=ExtResource("3_hmyw2")]
 position = Vector2(673, 169)
@@ -25,7 +25,7 @@ position = Vector2(673, 169)
 position = Vector2(181, 163)
 
 [node name="StarSystem3" parent="." instance=ExtResource("3_hmyw2")]
-position = Vector2(347, 424)
+position = Vector2(352, 368)
 
 [node name="StarSystem4" parent="." instance=ExtResource("3_hmyw2")]
 position = Vector2(1220, 421)

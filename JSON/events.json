@@ -1,7 +1,7 @@
 [
     {
       "Type": "DeadStar",
-      "Title": "[center]A Long Dead Star",
+      "Title": "A Long Dead Star",
       "Body": "As your ship drifts through the void, you find yourself in the haunting presence of a long-dead star. The once radiant celestial Body now lies dormant, its light extinguished eons ago. \nThe star's husk, a frozen remnant of its former glory, casts an eerie, ghostly glow. It's as if the star's dying breath lingers in the vacuum, a reminder of the inevitable fate that awaits all things in the cosmos.",
       "Choice1Text": "Syphon the remaining energy from star.\nFuel + 10\n\nA melancholy falls upon the crew.\nMorale - 5",
       "Choice1Effects": {
@@ -15,7 +15,7 @@
     },    
     {
         "Type": "DeadStar",
-        "Title": "[center]A Dead Star",
+        "Title": "A Dead Star",
         "Body": "The once radiant celestial body now lies dormant, its light extinguished eons ago. \nThe star’s husk, a frozen remnant of its former glory, casts an eerie, ghostly glow.\nIt’s as if the star's dying breath lingers in the vacuum, a reminder of the inevitable fate that awaits all things in the cosmos.",
         "Choice1Text": "Sadness takes hold of the crew at this sight \nMoral -5",
         "Choice1Effects": {
@@ -28,7 +28,7 @@
     },
     {
         "Type": "DeadStar",
-        "Title": "[center]A Desolate and Dead Star",
+        "Title": "A Desolate and Dead Star",
         "Body": "As you observe the dead star, a sense of melancholy washes over you. \nThe silence is deafening, a void that even your ship’s engines seem reluctant to disturb. \nThere is nothing here but the ghosts of a past long gone, a solemn reminder that even stars are not eternal.",
         "Choice1Text": "Its all too much... \nMoral -5",
         "Choice1Effects": {
@@ -41,7 +41,7 @@
     },
     {
       "Type": "Belt",
-      "Title": "[center]Mineral Field",
+      "Title": "Mineral Field",
       "Body": "Your ship enters an asteroid field, a chaotic region where countless fragments of shattered worlds drift aimlessly through space. The asteroids vary in size, from dust particles to colossal boulders, each scarred by eons of collisions and cosmic erosion. Some of the larger ones bear deep craters, remnants of ancient impacts, while others glisten with veins of precious minerals, their surfaces a patchwork of colors and textures.",
       "Choice1Text": "That crater resembles a face! \nMorale + 5",
       "Choice1Effects": {
@@ -54,7 +54,7 @@
     },
     {
       "Type": "Belt",
-      "Title": "[center]Asteroid Belt X2516b",
+      "Title": "Asteroid Belt X2516b",
       "Body": "The belt is a symphony of motion, with rocks spinning and tumbling in all directions. It’s as if you’ve entered a cosmic scrapyard, where the remnants of failed planets and forgotten moons have gathered, bound together in a turbulent dance by the gravitational forces of long-dead celestial bodies. Your ship’s sensors beep constantly, warning of potential collisions as you navigate through the dense field.You catch sight of something unusual — a derelict ship, long abandoned and half-buried in the side of an asteroid...",
       "Choice1Text": "Salvage the derelict for parts! \nFuel + 10 \n( will be different)",
       "Choice1Effects": {
@@ -67,7 +67,7 @@
     },
     {
       "Type": "MStar",
-      "Title": "[center]M Class Star S5124c",
+      "Title": "M Class Star S5124c",
       "Body": "Your ship approaches the M-class star, a crimson giant burning with a steady, ancient glow. The star’s surface churns with slow, simmering activity, its deep red hue a stark contrast to the cold void of space around it. This star, though smaller and cooler than its more energetic siblings, is a lifeblood for those who know how to harness its power. Its energy is abundant, a slow-burning furnace that has endured for billions of years and will continue to do so long after your journey is over",
       "Choice1Text": "Scoop fuel from the star \nFuel + 20",
       "Choice1Effects": {
@@ -80,7 +80,7 @@
     },
     {
       "Type": "MStar",
-      "Title": "[center]M Class Star f112u",
+      "Title": "M Class Star f112u",
       "Body": "Your ship approaches the M-class star. Despite its age, the M-class star exudes a quiet, enduring strength. It pulses with the rhythm of a celestial heartbeat, each wave of energy a reminder of the vast reserves of power just beneath its surface. Your ship’s systems hum with renewed life as they draw from the star’s immense reserves, the fuel gauges steadily climbing as the star willingly shares its ancient energy.",
       "Choice1Text": "Short Fuel Scoop \nFuel + 15",
       "Choice1Effects": {
@@ -94,7 +94,7 @@
     },
     {
       "Type": "MStar",
-      "Title": "[center]M Class Star w9952o",
+      "Title": "M Class Star w9952o",
       "Body": "There’s a sense of reverence as you orbit this stellar giant, a feeling that you’re tapping into something primordial and timeless. This star has fueled countless journeys before yours, and it will continue to do so, a beacon of sustenance in the deep, dark reaches of space.",
       "Choice1Text": "Scoop fuel from the star \nFuel + 10",
       "Choice1Effects": {
