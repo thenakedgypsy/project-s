@@ -13,10 +13,16 @@ public partial class PlayerShip : Node2D
 	private double _updateFrequency;
 	private double _lastUpdateTime;
 	private double _currentTime;
+	private Vector2 _selectionZoom;
+	private Vector2 _eventZoom;
+	private Camera2D _camera;
 	// Called when the node enters the scene tree for the first time.
 	
 	public override void _Ready()
 	{
+		_selectionZoom = new Vector2(0.75f, 0.75f);
+		_eventZoom = new Vector2(1.5f,1.5f);
+		_camera = GetNode<Camera2D>("Camera2D");
 		_currentTime = 0d;
 		_updateFrequency = 0.2d;
 		_lastUpdateTime = 0d;
@@ -26,15 +32,30 @@ public partial class PlayerShip : Node2D
 		SetDestination(this.GlobalPosition,null);
 	}
 
+
+	public void UpdateCameraZoom(double delta)
+	{
+		
+		string state = StateManager.Instance.State;
+		if(state == "SystemSelection")
+		{
+			_camera.Zoom = _camera.Zoom.MoveToward(_selectionZoom, 1.2f * (float)delta);
+		}
+		if(state == "EventWindow")
+		{
+			_camera.Zoom = _camera.Zoom.MoveToward(_eventZoom, 1.2f * (float)delta);
+		}
+	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		CheckPosition();
 		_currentTime += delta;
+		UpdateCameraZoom(delta);
 				
 	}
 
-	public void MoveToSystem()
+	public void MoveToSystem()		//move the ship to the destination system 
 	{
 		Vector2 currentPosition = GlobalPosition;
 		Vector2 direction = (_destination - currentPosition).Normalized();
@@ -46,7 +67,6 @@ public partial class PlayerShip : Node2D
 			if(_currentTime - _lastUpdateTime >= _updateFrequency)
 			{
 				_lastUpdateTime = _currentTime;
-				GD.Print($"{_currentTime} - {_lastUpdateTime} = {_currentTime - _lastUpdateTime}");
 				ResourceManager.Instance.Fuel -= 1;
 			}
     	}

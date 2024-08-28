@@ -8,18 +8,17 @@ public partial class Event : Node
 	public string Type;	
 	public string Title;
 	public string Body;
-	public string Choice1;
-	public string Choice2;
-	public string Choice3;
+	public Choice ChoiceA;
+	public Choice ChoiceB;
+	public bool Used; // for not repeating? 
 
-	public Event(string type, string title, string body, string choice1, string choice2, string choice3)
+	public Event(string type, string title, string body, Choice choice1, Choice choice2)
 	{
 		Type = type;
 		Title = title;
 		Body = body;
-		Choice1 = choice1;
-		Choice2 = choice2;
-		Choice3 = choice3;
+		ChoiceA = choice1;
+		ChoiceB = choice2;
 	}
 
 	

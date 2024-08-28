@@ -6,11 +6,18 @@ public partial class EventWindow : CanvasLayer
 
 	public RichTextLabel TitleLabel;
 	public RichTextLabel BodyLabel;
+	public Button ButtonA;
+	public Button ButtonB;
+	public Choice ChoiceA;
+	public Choice ChoiceB;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		TitleLabel = GetNode<RichTextLabel>("Window/Title");
 		BodyLabel = GetNode<RichTextLabel>("Window/Body");
+		ButtonA = GetNode<Button>("ChoiceBackA/ChoiceButtonA");
+		ButtonB = GetNode<Button>("ChoiceBackB/ChoiceButtonB");
 		Visible = false;
 	}
 
@@ -19,7 +26,7 @@ public partial class EventWindow : CanvasLayer
 	{
 	}
 
-	public void LoadEvent(Event eventToLoad)
+	public void LoadEvent(Event eventToLoad)	//event comes in from system (generatetype)
 	{
 		if(eventToLoad == null)
 		{
@@ -29,16 +36,39 @@ public partial class EventWindow : CanvasLayer
 		GD.Print("Loading event to Window");
 		TitleLabel.Text = eventToLoad.Title;
 		BodyLabel.Text = eventToLoad.Body;
-		Visible = true;
+		ShowEventWindow();
+		ChoiceA = eventToLoad.ChoiceA;
+		ChoiceB = eventToLoad.ChoiceB;
+		PopulateChoiceButtons();
 	}
 
 	public void ShowEventWindow()
 	{
+		StateManager.Instance.EventWindow();
 		Visible = true;
 	}
 
 	public void HideEventWindow()
 	{
+		StateManager.Instance.SystemSelection();
 		Visible = false;
+	}
+
+	public void PopulateChoiceButtons()
+	{
+		ButtonA.Text = ChoiceA.Text;
+		ButtonB.Text = ChoiceB.Text;
+	}
+
+	public void ButtonAPressed()
+	{
+		ChoiceA.EnactChoice();
+		HideEventWindow();
+	}
+
+	public void ButtonBPressed()
+	{
+		ChoiceB.EnactChoice();
+		HideEventWindow();
 	}
 }

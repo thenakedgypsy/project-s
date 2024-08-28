@@ -10,14 +10,28 @@ public partial class Choice : Node
 	public Choice(string text, Dictionary<string,int> change)
 	{
 		Text = text;
-		ResourceChange = change;
-		
+		ResourceChange = change;		
 	}
 
 	public void EnactChoice()
 	{
-		
+		foreach(string resource in ResourceChange.Keys)
+		{
+			int change = ResourceChange[resource];
+			if(resource == "Fuel")
+			{				
+				ResourceManager.Instance.AdjustFuel(change);
+				GD.Print($"Resource {resource} adjusted by a choice by {change}.");
+			}
+			else if(resource == "Morale")
+			{
+				ResourceManager.Instance.AdjustMorale(change);
+				GD.Print($"Resource {resource} adjusted by a choice by {change}.");
+			}
+			else
+			{
+				GD.Print($"Resource {resource} not found to make change.");
+			}
+		}
 	}
-
-
 }

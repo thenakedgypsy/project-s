@@ -19,4 +19,14 @@ public partial class StateManager : Node
 	public override void _Process(double delta)
 	{
 	}
+
+	public void SystemSelection()
+	{
+		State = "SystemSelection";
+	}
+
+	public void EventWindow()
+	{
+		State = "EventWindow";
+	}	
 }

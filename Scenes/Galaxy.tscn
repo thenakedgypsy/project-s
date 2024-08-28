@@ -1,58 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://cavqrwshjbj82"]
+[gd_scene load_steps=7 format=3 uid="uid://cavqrwshjbj82"]
 
 [ext_resource type="PackedScene" uid="uid://1nql8syso6ok" path="res://Prefabs/Background.tscn" id="1_dbjhr"]
 [ext_resource type="PackedScene" uid="uid://cffpplecbqj0l" path="res://Prefabs/PlayerShip.tscn" id="2_b7ioy"]
 [ext_resource type="PackedScene" uid="uid://c8qqtyxe3t4nh" path="res://Prefabs/StarSystem.tscn" id="3_hmyw2"]
 [ext_resource type="PackedScene" uid="uid://5nk8mqdrlqre" path="res://Prefabs/EventWindow.tscn" id="4_3uehk"]
 [ext_resource type="PackedScene" uid="uid://ty3x5sgpv4l4" path="res://Prefabs/FuelTracker.tscn" id="5_2afbo"]
+[ext_resource type="PackedScene" uid="uid://clr7bucdvk1tx" path="res://Prefabs/MoraleTracker.tscn" id="6_ppkfe"]
 
 [node name="Galaxy" type="Node2D"]
 
-[node name="Background2" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = 1624.0
-offset_top = -645.0
-offset_right = 3544.0
-offset_bottom = 435.0
-scale = Vector2(1.62975, 2.00428)
-
-[node name="Background" parent="Background2" instance=ExtResource("1_dbjhr")]
-layout_mode = 0
-offset_left = -3130.92
-offset_top = 771.196
-offset_right = -1210.92
-offset_bottom = 1851.2
-scale = Vector2(1.62975, 2.00428)
-
-[node name="Background" parent="Background2/Background" instance=ExtResource("1_dbjhr")]
-layout_mode = 0
-offset_left = -788.217
-offset_top = -870.027
-offset_right = 1131.78
-offset_bottom = 209.973
-scale = Vector2(1.03431, 0.804952)
-
-[node name="Background" parent="Background2/Background/Background" instance=ExtResource("1_dbjhr")]
-layout_mode = 0
-offset_left = 2588.51
-offset_top = 260.492
-offset_right = 4508.51
-offset_bottom = 1340.49
-scale = Vector2(1.62975, 2.00428)
-
-[node name="Background" parent="Background2/Background/Background/Background" instance=ExtResource("1_dbjhr")]
-layout_mode = 0
-offset_left = -2616.77
-offset_top = -1994.28
-offset_right = -696.771
-offset_bottom = -914.276
-scale = Vector2(1.62975, 2.00428)
-
 [node name="Background" parent="." instance=ExtResource("1_dbjhr")]
-offset_left = -1157.0
-offset_top = -659.0
-offset_right = 763.0
-offset_bottom = 421.0
-scale = Vector2(1.62975, 2.00428)
+offset_left = -1714.0
+offset_top = -1442.0
+offset_right = 2286.0
+offset_bottom = 2558.0
 
 [node name="PlayerShip" parent="." instance=ExtResource("2_b7ioy")]
 position = Vector2(202, 521)
@@ -96,6 +57,59 @@ position = Vector2(-542, -497)
 [node name="EventWindow" parent="." instance=ExtResource("4_3uehk")]
 
 [node name="FuelTracker" parent="." instance=ExtResource("5_2afbo")]
+
+[node name="MoraleTracker" parent="." instance=ExtResource("6_ppkfe")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.316996, 0.590228, 0.845627, 1)
+
+[node name="Background2" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = -5528.0
+offset_top = -1467.0
+offset_right = -1528.0
+offset_bottom = 2533.0
+
+[node name="Background3" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = -1656.0
+offset_top = -5243.0
+offset_right = 2344.0
+offset_bottom = -1243.0
+
+[node name="Background4" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = 2024.0
+offset_top = -1403.0
+offset_right = 6024.0
+offset_bottom = 2597.0
+
+[node name="Background5" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = -1944.0
+offset_top = 2213.0
+offset_right = 2056.0
+offset_bottom = 6213.0
+
+[node name="Background6" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = -5720.0
+offset_top = 2405.0
+offset_right = -1720.0
+offset_bottom = 6405.0
+
+[node name="Background7" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = 2024.0
+offset_top = 2373.0
+offset_right = 6024.0
+offset_bottom = 6373.0
+
+[node name="Background8" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = -5560.0
+offset_top = -5339.0
+offset_right = -1560.0
+offset_bottom = -1339.0
+
+[node name="Background9" parent="." instance=ExtResource("1_dbjhr")]
+offset_left = 2024.0
+offset_top = -5243.0
+offset_right = 6024.0
+offset_bottom = -1243.0
 
 [connection signal="ArrivedInSystem" from="StarSystem" to="StarSystem/ScanButton" method="ArrivedInSystem"]
 [connection signal="ArrivedInSystem" from="StarSystem2" to="StarSystem2/ScanButton" method="ArrivedInSystem"]

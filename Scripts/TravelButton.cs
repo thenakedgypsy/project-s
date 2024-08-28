@@ -90,7 +90,7 @@ public partial class TravelButton : Area2D
 			if(player != null)
 			{
 				TravelClicked += player.SetDestination;
-				GD.Print($"Connected System {this} to Player");
+				//GD.Print($"Connected System {this} to Player");
 			}
 			else
 			{

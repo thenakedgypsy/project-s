@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class FuelTracker : CanvasLayer
+public partial class MoraleTracker : CanvasLayer
 {
 
 	public TextureProgressBar Bar;
@@ -19,12 +19,12 @@ public partial class FuelTracker : CanvasLayer
 	public override void _Process(double delta)
 	{
 		UpdateLabel();
-		Bar.Value = ResourceManager.Instance.Fuel;		
+		Bar.Value = ResourceManager.Instance.Morale;		
 	}
 
 	public void UpdateLabel()
 	{
-		int currentFuel = ResourceManager.Instance.Fuel;
-		Label.Text = $"Fuel: {currentFuel} / 100";
+		int currentMorale = ResourceManager.Instance.Morale;
+		Label.Text = $"Morale: {currentMorale}%";
 	}
 }
