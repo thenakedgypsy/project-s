@@ -1,30 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://cavqrwshjbj82"]
+[gd_scene load_steps=10 format=3 uid="uid://cavqrwshjbj82"]
 
 [ext_resource type="PackedScene" uid="uid://1nql8syso6ok" path="res://Prefabs/Background.tscn" id="1_dbjhr"]
 [ext_resource type="PackedScene" uid="uid://bmdl0vy5f2bys" path="res://Prefabs/SystemSpawner.tscn" id="1_w3gfw"]
 [ext_resource type="PackedScene" uid="uid://cffpplecbqj0l" path="res://Prefabs/PlayerShip.tscn" id="2_b7ioy"]
 [ext_resource type="PackedScene" uid="uid://5nk8mqdrlqre" path="res://Prefabs/EventWindow.tscn" id="4_3uehk"]
 [ext_resource type="PackedScene" uid="uid://ty3x5sgpv4l4" path="res://Prefabs/FuelTracker.tscn" id="5_2afbo"]
+[ext_resource type="PackedScene" uid="uid://c4d5lpwef5tr" path="res://Prefabs/SupplyTracker.tscn" id="6_3gv4a"]
 [ext_resource type="PackedScene" uid="uid://clr7bucdvk1tx" path="res://Prefabs/MoraleTracker.tscn" id="6_ppkfe"]
+[ext_resource type="AudioStream" uid="uid://j062fk2jbgij" path="res://Assets/Audio/Ambience.mp3" id="8_0w4jl"]
+[ext_resource type="PackedScene" uid="uid://dkika8pf02hti" path="res://Prefabs/IntroMessage.tscn" id="9_jopf4"]
 
 [node name="Galaxy" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("1_dbjhr")]
 z_index = -1
-offset_left = -480.0
-offset_top = 267.0
-offset_right = 3520.0
-offset_bottom = 4267.0
-scale = Vector2(3.85538, 2.88386)
+offset_left = -923.0
+offset_top = -3976.0
+offset_right = 3077.0
+offset_bottom = 24.0
+scale = Vector2(2.69258, 2.07502)
 
 [node name="PlayerShip" parent="." instance=ExtResource("2_b7ioy")]
-position = Vector2(6992, 6348)
+position = Vector2(6122, 3547)
 
 [node name="EventWindow" parent="." instance=ExtResource("4_3uehk")]
 
 [node name="FuelTracker" parent="." instance=ExtResource("5_2afbo")]
 
 [node name="MoraleTracker" parent="." instance=ExtResource("6_ppkfe")]
+
+[node name="SupplyTracker" parent="." instance=ExtResource("6_3gv4a")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.6701, 0.814045, 0.958432, 1)
@@ -33,3 +38,12 @@ color = Color(0.6701, 0.814045, 0.958432, 1)
 position = Vector2(0, -11)
 NumberTospawn = 500
 SpawnAreaSize = Vector2(10000, 9000)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0w4jl")
+volume_db = -12.0
+autoplay = true
+parameters/looping = true
+
+[node name="IntroMessage" parent="." instance=ExtResource("9_jopf4")]
+position = Vector2(2553, 1218)

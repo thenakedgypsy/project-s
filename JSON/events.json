@@ -47,18 +47,18 @@
       "Choice1Effects": {
         "Moral": 5
       },
-      "Choice2Text": "Mine the minerals. \n Fuel + 5 \n( will be different resource)",
+      "Choice2Text": "Mine the minerals. \n Supplies + 5 \n",
       "Choice2Effects": {
-        "Fuel": 5
+        "Supplies": 5
       }
     },
     {
       "Type": "Belt",
       "Title": "Asteroid Belt X2516b",
       "Body": "The belt is a symphony of motion, with rocks spinning and tumbling in all directions. It’s as if you’ve entered a cosmic scrapyard, where the remnants of failed planets and forgotten moons have gathered, bound together in a turbulent dance by the gravitational forces of long-dead celestial bodies. Your ship’s sensors beep constantly, warning of potential collisions as you navigate through the dense field.You catch sight of something unusual — a derelict ship, long abandoned and half-buried in the side of an asteroid...",
-      "Choice1Text": "Salvage the derelict for parts! \nFuel + 10 \n( will be different)",
+      "Choice1Text": "Salvage the derelict for parts! \nSupplies + 10 \n",
       "Choice1Effects": {
-        "Fuel": 5
+        "Supplies": 10
       },
       "Choice2Text": "Say a prayer for the brave souls who were lost here. \n Morale + 5",
       "Choice2Effects": {
@@ -104,5 +104,766 @@
       "Choice2Effects": {
         "Morale": 5  
       }
+    },
+    {
+      "Type": "DeadStar",
+      "Title": "Echoes of a Collapsed Giant",
+      "Body": "Your ship drifts past the remnants of a collapsed star, now nothing more than a dense, cold core surrounded by a faint halo of gas. The sheer gravitational pull of this dead giant tugs at your ship, a silent testament to the power it once wielded. It's a sobering reminder of the cycle of birth and death that governs the cosmos.",
+      "Choice1Text": "Dive closer to study the phenomenon.\nFuel - 5\nMorale + 5",
+      "Choice1Effects": {
+          "Fuel": -5,
+          "Morale": 5
+      },
+      "Choice2Text": "Keep your distance and move on.",
+      "Choice2Effects": {
+          "Fuel": 0
+      }
+  },
+  {
+      "Type": "Belt",
+      "Title": "The Singing Stones",
+      "Body": "As you navigate through this asteroid belt, your ship's sensors pick up strange, rhythmic vibrations. The asteroids here seem to resonate with a haunting, melodic hum, as if they are singing a song of the cosmos. It's an eerie but oddly beautiful phenomenon, one that has the crew both fascinated and unsettled.",
+      "Choice1Text": "Record the sounds for further study.\nSupplies + 5",
+      "Choice1Effects": {
+          "Supplies": 5
+      },
+      "Choice2Text": "Quickly pass through and avoid any distractions.\nMorale - 5",
+      "Choice2Effects": {
+          "Morale": -5
+      }
+  },
+  {
+      "Type": "StarWithPlanets",
+      "Title": "Habitable Zone",
+      "Body": "Your ship arrives at a star with a system of planets, one of which lies within the habitable zone. Sadly, it appears to be a mineral planet. Devoid of Water.",
+      "Choice1Text": "Take some of the resources.\nSupplies + 10",
+      "Choice1Effects": {
+          "Supplies": 10
+      },
+      "Choice2Text": "Log the coordinates and move on.\nFuel - 5",
+      "Choice2Effects": {
+          "Fuel": -5
+      }
+  },
+  {
+      "Type": "DeadStar",
+      "Title": "Frozen Nebula Remnants",
+      "Body": "You come across the remains of a once-majestic nebula, now frozen and lifeless. The colorful gases that once danced in the star’s light are now still and dim. The crew is reminded of the beauty that once was and the cold reality that remains.",
+      "Choice1Text": "Reflect on the transient nature of the universe.\nMorale - 5",
+      "Choice1Effects": {
+          "Morale": -5
+      },
+      "Choice2Text": "Continue your journey in silence.",
+      "Choice2Effects": {
+          "Fuel": 0
+      }
+  },
+  {
+      "Type": "Belt",
+      "Title": "Field of Glittering Debris",
+      "Body": "Your ship drifts into a field of small, glittering debris, remnants of a shattered planet. The fragments catch the light from a nearby star, creating a mesmerizing display that captivates the crew. However, the field is dense and could be hazardous to navigate.",
+      "Choice1Text": "Collect some of the debris for analysis.\nSupplies + 5",
+      "Choice1Effects": {
+          "Supplies": 5
+      },
+      "Choice2Text": "Carefully navigate through the field.\nFuel - 5",
+      "Choice2Effects": {
+          "Fuel": -5
+      }
+  },
+  {
+      "Type": "StarWithPlanets",
+      "Title": "Gas Giant with Storms",
+      "Body": "You encounter a massive gas giant, its surface roiling with violent storms. The planet’s atmosphere churns with clouds of various colors, illuminated by flashes of lightning. It’s a mesmerizing yet terrifying sight, showcasing the raw power of nature in its most extreme form.",
+      "Choice1Text": "Study the storms from a safe distance.\nMorale + 5",
+      "Choice1Effects": {
+          "Morale": 5
+      },
+      "Choice2Text": "Attempt a daring flyby to collect data.\nFuel - 10\nSupplies + 10",
+      "Choice2Effects": {
+          "Fuel": -10,
+          "Supplies": 10
+      }
+  },
+  {
+    "Type": "DeadStar",
+    "Title": "The Ashes of a Supernova",
+    "Body": "Your ship enters a region of space filled with the scattered remnants of a supernova. The once-glorious star exploded long ago, leaving behind a cloud of ash and debris. The remnants are still charged with energy, crackling faintly as you pass through. It's a humbling reminder of the star's final, violent breath.",
+    "Choice1Text": "Collect remnants for research.\nSupplies + 10\nMorale - 5",
+    "Choice1Effects": {
+        "Supplies": 10,
+        "Morale": -5
+    },
+    "Choice2Text": "Avoid the remnants and continue on.\nFuel - 5",
+    "Choice2Effects": {
+        "Fuel": -5
     }
+},
+{
+    "Type": "Belt",
+    "Title": "The Cradle of Ruins",
+    "Body": "Your ship navigates through an asteroid belt that was once the heart of a vibrant planetary system. Now, all that remains are the shattered pieces of what were once worlds. The belt is dense, filled with the debris of countless civilizations that perished in a cataclysmic event. There’s a haunting stillness here, a graveyard of planets long forgotten.",
+    "Choice1Text": "Search for ancient relics.\nSupplies + 5\nMorale + 5",
+    "Choice1Effects": {
+        "Supplies": 5,
+        "Morale": 5
+    },
+    "Choice2Text": "Leave the past undisturbed.\nFuel - 5",
+    "Choice2Effects": {
+        "Fuel": -5
+    }
+},
+{
+    "Type": "StarWithPlanets",
+    "Title": "Deserted World",
+    "Body": "You discover a barren planet orbiting a distant star. The planet’s surface is dry and cracked, with no signs of life or water. It’s a harsh, unwelcoming world, but something about its desolation speaks to the crew’s sense of isolation in the vastness of space.",
+    "Choice1Text": "Explore the surface for resources.\nSupplies + 10\nFuel - 5",
+    "Choice1Effects": {
+        "Supplies": 10,
+        "Fuel": -5
+    },
+    "Choice2Text": "Move on, there's nothing for you here.\nMorale - 5",
+    "Choice2Effects": {
+        "Morale": -5
+    }
+},
+{
+    "Type": "DeadStar",
+    "Title": "Silent Pulsar",
+    "Body": "Your ship approaches a pulsar, a rapidly spinning neutron star that emits beams of radiation. However, this one is eerily silent, its pulses long extinguished. The star is now just a cold, dark sphere, spinning quietly in the void. The crew feels a chill as they realize they’re witnessing the death of even the most powerful celestial objects.",
+    "Choice1Text": "Attempt to reignite the pulsar.\nFuel - 10\nMorale + 10",
+    "Choice1Effects": {
+        "Fuel": -10,
+        "Morale": 10
+    },
+    "Choice2Text": "Observe and record the phenomenon.\nSupplies + 5",
+    "Choice2Effects": {
+        "Supplies": 5
+    }
+},
+{
+    "Type": "Belt",
+    "Title": "Shifting Sands Belt",
+    "Body": "The asteroid belt you encounter is unlike any other. The asteroids are composed of fine, dust-like particles that shift and swirl, creating the illusion of a vast, drifting desert in space. Navigating through it is treacherous, as the sands obscure your sensors and make it difficult to judge distances.",
+    "Choice1Text": "Risk navigating through to save time.\nFuel + 5\nMorale - 10",
+    "Choice1Effects": {
+        "Fuel": 5,
+        "Morale": -10
+    },
+    "Choice2Text": "Take the long way around.\nFuel - 10\nSupplies + 5",
+    "Choice2Effects": {
+        "Fuel": -10,
+        "Supplies": 5
+    }
+},
+{
+    "Type": "StarWithPlanets",
+    "Title": "Frozen Exoplanet",
+    "Body": "Your ship approaches a star system where one of the planets is locked in a permanent ice age. The planet’s surface is a vast, frozen expanse, with towering glaciers and frozen oceans. Despite the harsh conditions, there’s a strange beauty to the planet, a stillness that’s both calming and unsettling.",
+    "Choice1Text": "Send a team to investigate.\nSupplies + 5\nMorale - 5",
+    "Choice1Effects": {
+        "Supplies": 5,
+        "Morale": -5
+    },
+    "Choice2Text": "Admire the view from orbit.\nMorale + 5",
+    "Choice2Effects": {
+        "Morale": 5
+    }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Ghostly Star Remnant",
+  "Body": "Your ship comes across the dim remnant of a star, barely emitting any light. The star's energy is almost completely spent, but there's a faint pulse left in its core, offering one last breath of power. The crew debates whether to harness it or leave it to rest.",
+  "Choice1Text": "Syphon the last of its energy.\nFuel + 15\nMorale - 5",
+  "Choice1Effects": {
+      "Fuel": 15,
+      "Morale": -5
+  },
+  "Choice2Text": "Respect its peaceful end and move on.\nMorale + 5",
+  "Choice2Effects": {
+      "Morale": 5
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "The Star's Final Gift",
+  "Body": "As your ship navigates through the dark void, you encounter a dead star whose surface is littered with strange, glimmering crystals. These crystals hold the last remnants of the star’s energy, a final gift to those who pass by.",
+  "Choice1Text": "Harvest the crystals for fuel.\nFuel + 20\nSupplies - 5",
+  "Choice1Effects": {
+      "Fuel": 20,
+      "Supplies": -5
+  },
+  "Choice2Text": "Admire the beauty and move on.\nMorale + 5",
+  "Choice2Effects": {
+      "Morale": 5
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Cold and Quiet",
+  "Body": "You find a star that has been dead for so long that even its remnants have grown cold. However, deep within its core lies a pocket of unstable energy that could be tapped into. The question is, do you dare disturb it?",
+  "Choice1Text": "Extract the energy cautiously.\nFuel + 10\nMorale - 5",
+  "Choice1Effects": {
+      "Fuel": 10,
+      "Morale": -5
+  },
+  "Choice2Text": "Leave it undisturbed.\nFuel - 5",
+  "Choice2Effects": {
+      "Fuel": -5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Fuel-Rich Asteroids",
+  "Body": "Your sensors detect a cluster of asteroids rich in combustible materials. These rocks could provide a significant boost to your fuel reserves if mined properly. However, the field is dense, and navigating it will be risky.",
+  "Choice1Text": "Mine the asteroids for fuel.\nFuel + 20\nSupplies - 5",
+  "Choice1Effects": {
+      "Fuel": 20,
+      "Supplies": -5
+  },
+  "Choice2Text": "Avoid the risk and navigate around.\nFuel - 10\nMorale + 5",
+  "Choice2Effects": {
+      "Fuel": -10,
+      "Morale": 5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Ancient Wreckage",
+  "Body": "Amidst the debris of a long-lost battle, you find the remains of a massive starship. Its fuel cells are still intact, offering a chance to scavenge some much-needed fuel. However, the wreckage is unstable and could collapse at any moment.",
+  "Choice1Text": "Salvage the fuel cells.\nFuel + 15\nSupplies - 5",
+  "Choice1Effects": {
+      "Fuel": 15,
+      "Supplies": -5
+  },
+  "Choice2Text": "Move on before the wreckage collapses.\nFuel - 5\nMorale + 5",
+  "Choice2Effects": {
+      "Fuel": -5,
+      "Morale": 5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Debris Field",
+  "Body": "You navigate through a dense debris field, the remnants of a shattered moon. Among the debris, you detect traces of fuel-rich gases trapped in some of the larger fragments. It’s a dangerous area, but the potential reward is tempting.",
+  "Choice1Text": "Extract the gases carefully.\nFuel + 10",
+  "Choice1Effects": {
+      "Fuel": 10
+  },
+  "Choice2Text": "It’s too risky—continue on your path.\nFuel - 10\nSupplies + 5",
+  "Choice2Effects": {
+      "Fuel": -10,
+      "Supplies": 5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Gas Giant Harvest",
+  "Body": "Your ship approaches a massive gas giant, its atmosphere rich with volatile gases. With the right equipment, you could extract a significant amount of fuel. The operation would be tricky, but the reward could be worth it.",
+  "Choice1Text": "Harvest the gases for fuel.\nFuel + 25\nMorale - 5",
+  "Choice1Effects": {
+      "Fuel": 25,
+      "Morale": -5
+  },
+  "Choice2Text": "Observe from orbit and move on.\nFuel - 5\nMorale + 5",
+  "Choice2Effects": {
+      "Fuel": -5,
+      "Morale": 5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Volatile Atmosphere",
+  "Body": "One of the planets in this star system has a highly volatile atmosphere, filled with combustible gases. Tapping into this resource could refill your fuel reserves, but the process would be hazardous.",
+  "Choice1Text": "Risk extracting the gases.\nFuel + 20\nSupplies - 5",
+  "Choice1Effects": {
+      "Fuel": 20,
+      "Supplies": -5
+  },
+  "Choice2Text": "Play it safe and continue on.\nMorale + 5",
+  "Choice2Effects": {
+      "Morale": 5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Moon Harvest",
+  "Body": "A small moon orbiting a nearby planet is rich in frozen hydrocarbons. Harvesting these could replenish your fuel, but it would require careful and time-consuming extraction.",
+  "Choice1Text": "Harvest the hydrocarbons.\nFuel + 15\nSupplies - 5",
+  "Choice1Effects": {
+      "Fuel": 15,
+      "Supplies": -5
+  },
+  "Choice2Text": "Skip the harvest and conserve time.\nFuel - 5\nMorale + 5",
+  "Choice2Effects": {
+      "Fuel": -5,
+      "Morale": 5
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Whispering Neutron Star",
+  "Body": "Your ship approaches a peculiar neutron star. Though it has long since died, faint electromagnetic pulses still emanate from its core, creating an eerie 'whisper' that your sensors can detect. The crew is both fascinated and unnerved by this cosmic phenomenon.",
+  "Choice1Text": "Study the pulses closely.\nSupplies + 10\nMorale - 5",
+  "Choice1Effects": {
+    "Supplies": 10,
+    "Morale": -5
+  },
+  "Choice2Text": "Keep your distance and observe.\nFuel - 5",
+  "Choice2Effects": {
+    "Fuel": -5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Crystalline Asteroid Field",
+  "Body": "Your ship enters an asteroid field unlike any you've seen before. The asteroids are composed of translucent crystals that refract light in mesmerizing patterns. While beautiful, the field is dense and navigation is treacherous.",
+  "Choice1Text": "Navigate through carefully to collect samples.\nSupplies + 15\nFuel - 10",
+  "Choice1Effects": {
+    "Supplies": 15,
+    "Fuel": -10
+  },
+  "Choice2Text": "Admire the view from a safe distance.\nMorale + 5",
+  "Choice2Effects": {
+    "Morale": 5
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Flaring Red Dwarf",
+  "Body": "You encounter an M-class star in the midst of a massive flare. The star's surface roils with activity, ejecting massive amounts of plasma into space. It's a rare opportunity to witness such an event up close, but it also poses significant risks to your ship.",
+  "Choice1Text": "Brave the storm to collect valuable data.\nFuel + 20\nMorale - 10",
+  "Choice1Effects": {
+    "Fuel": 20,
+    "Morale": -10
+  },
+  "Choice2Text": "Keep a safe distance and observe.\nMorale + 5",
+  "Choice2Effects": {
+    "Morale": 5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Binary System Ballet",
+  "Body": "Your ship arrives at a binary star system. Two stars, one slightly larger than the other, dance around each other in a cosmic ballet. Several planets orbit the pair, their surfaces reflecting the combined light of both stars in a dazzling display.",
+  "Choice1Text": "Study the unique planetary orbits.\nSupplies + 10",
+  "Choice1Effects": {
+    "Supplies": 10
+  },
+  "Choice2Text": "Use the stars' gravity to slingshot the ship.\nFuel + 15\nMorale - 5",
+  "Choice2Effects": {
+    "Fuel": 15,
+    "Morale": -5
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Stellar Graveyard",
+  "Body": "Your ship drifts into a region of space littered with the remnants of multiple dead stars. It's as if you've stumbled upon a cosmic cemetery, each lifeless core a silent monument to the stars that once burned brightly here.",
+  "Choice1Text": "Collect rare elements from the stellar remains.\nSupplies + 20\nMorale - 10",
+  "Choice1Effects": {
+    "Supplies": 20,
+    "Morale": -10
+  },
+  "Choice2Text": "Pay respects and move on.\nMorale + 5",
+  "Choice2Effects": {
+    "Morale": 5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Living Asteroid Swarm",
+  "Body": "As you approach what appears to be a normal asteroid belt, your sensors detect something extraordinary - the asteroids are alive! These silicon-based lifeforms move in coordinated patterns, almost as if they're communicating with each other.",
+  "Choice1Text": "Attempt to communicate with the swarm.\nMorale + 15\nFuel - 10",
+  "Choice1Effects": {
+    "Morale": 15,
+    "Fuel": -10
+  },
+  "Choice2Text": "Observe from a distance to avoid disturbing them.\nSupplies + 5",
+  "Choice2Effects": {
+    "Supplies": 5
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Stellar Nursery",
+  "Body": "Your ship enters a vast nebula surrounding an M-class star. The nebula is teeming with newly forming stars, their birth witnessed by your awestruck crew. It's a rare glimpse into the beginning stages of stellar life.",
+  "Choice1Text": "Collect data on star formation.\nSupplies + 15",
+  "Choice1Effects": {
+    "Supplies": 15
+  },
+  "Choice2Text": "Use the nebula's gases to refuel.\nFuel + 20\nMorale - 5",
+  "Choice2Effects": {
+    "Fuel": 20,
+    "Morale": -5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Ocean World Discovery",
+  "Body": "In this star system, you discover a planet entirely covered by a vast, deep ocean. Initial scans suggest the presence of complex aquatic life forms beneath the waves. The crew debates the risks and potential rewards of a closer investigation.",
+  "Choice1Text": "Launch a probe to explore the depths.\nSupplies + 10\nFuel - 5",
+  "Choice1Effects": {
+    "Supplies": 10,
+    "Fuel": -5
+  },
+  "Choice2Text": "Document from orbit and continue on.\nMorale + 5",
+  "Choice2Effects": {
+    "Morale": 5
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Gravitational Anomaly",
+  "Body": "As your ship approaches the remnants of a dead star, you detect an unusual gravitational anomaly. The intense gravitational forces are causing strain on your ship's systems, particularly affecting your supply storage units.",
+  "Choice1Text": "Investigate the anomaly closely.\nSupplies - 10\nMorale + 5",
+  "Choice1Effects": {
+    "Supplies": -10,
+    "Morale": 5
+  },
+  "Choice2Text": "Quickly retreat to safer space.\nFuel - 5",
+  "Choice2Effects": {
+    "Fuel": -5
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Corrosive Stellar Remnants",
+  "Body": "The dead star before you has left behind a cloud of highly corrosive particles. These particles could potentially damage your ship's exterior and compromise your supply containers.",
+  "Choice1Text": "Attempt to collect samples.\nSupplies - 15\nFuel + 10",
+  "Choice1Effects": {
+    "Supplies": -15,
+    "Fuel": 10
+  },
+  "Choice2Text": "Steer clear of the corrosive cloud.\nMorale - 5",
+  "Choice2Effects": {
+    "Morale": -5
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Time Dilation Effect",
+  "Body": "Your ship encounters a bizarre time dilation effect near this dead star. The phenomenon is causing some of your supplies to age rapidly, potentially spoiling them.",
+  "Choice1Text": "Study the effect up close.\nSupplies - 20\nMorale + 10",
+  "Choice1Effects": {
+    "Supplies": -20,
+    "Morale": 10
+  },
+  "Choice2Text": "Retreat to normal space-time.\nFuel - 10",
+  "Choice2Effects": {
+    "Fuel": -10
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Micrometeoroid Storm",
+  "Body": "As you navigate through the asteroid belt, you encounter a dense cloud of micrometeoroids. These tiny space rocks pose a significant threat to your ship's outer hull and could damage your supply containers.",
+  "Choice1Text": "Push through the storm.\nSupplies - 15\nFuel + 5",
+  "Choice1Effects": {
+    "Supplies": -15,
+    "Fuel": 5
+  },
+  "Choice2Text": "Take a longer, safer route.\nFuel - 10",
+  "Choice2Effects": {
+    "Fuel": -10
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Parasitic Asteroid",
+  "Body": "You discover a strange, porous asteroid that seems to be emitting an unknown radiation. Upon closer inspection, you realize it's home to microscopic organisms that could potentially contaminate your supplies.",
+  "Choice1Text": "Collect samples for study.\nSupplies - 10\nMorale + 5",
+  "Choice1Effects": {
+    "Supplies": -10,
+    "Morale": 5
+  },
+  "Choice2Text": "Avoid contact and move on.\nFuel - 5",
+  "Choice2Effects": {
+    "Fuel": -5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Unstable Mineral Deposit",
+  "Body": "Your sensors detect a rich mineral deposit in a nearby asteroid. However, the deposit is highly unstable and attempting to mine it could result in an explosion that damages your supply storage.",
+  "Choice1Text": "Risk mining the deposit.\nSupplies - 20\nFuel + 15",
+  "Choice1Effects": {
+    "Supplies": -20,
+    "Fuel": 15
+  },
+  "Choice2Text": "Leave the deposit untouched.\nMorale - 5",
+  "Choice2Effects": {
+    "Morale": -5
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Solar Flare Threat",
+  "Body": "As you approach the M-class star to refuel, your sensors detect an imminent solar flare. The intense radiation could potentially damage your ship's systems and degrade some of your supplies.",
+  "Choice1Text": "Quickly scoop fuel before the flare hits.\nFuel + 20\nSupplies - 10",
+  "Choice1Effects": {
+    "Fuel": 20,
+    "Supplies": -10
+  },
+  "Choice2Text": "Retreat to a safe distance.\nMorale - 5",
+  "Choice2Effects": {
+    "Morale": -5
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Stellar Magnetic Interference",
+  "Body": "The M-class star's powerful magnetic field is interfering with your ship's systems. The interference is particularly affecting your supply storage units, causing some items to malfunction or spoil.",
+  "Choice1Text": "Push through to collect fuel.\nFuel + 15\nSupplies - 15",
+  "Choice1Effects": {
+    "Fuel": 15,
+    "Supplies": -15
+  },
+  "Choice2Text": "Abort the fuel collection.\nMorale - 10",
+  "Choice2Effects": {
+    "Morale": -10
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Stellar Debris Field",
+  "Body": "The area around the M-class star is filled with stellar debris, making fuel collection dangerous. Navigating through this field risks damaging your ship and your supply containers.",
+  "Choice1Text": "Carefully maneuver to collect fuel.\nFuel + 25\nSupplies - 20",
+  "Choice1Effects": {
+    "Fuel": 25,
+    "Supplies": -20
+  },
+  "Choice2Text": "Avoid the debris field.\nFuel - 10",
+  "Choice2Effects": {
+    "Fuel": -10
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Toxic Atmosphere",
+  "Body": "One of the planets in this system has an atmosphere rich in fuel resources, but it's also highly toxic. Collecting the fuel could contaminate some of your supplies.",
+  "Choice1Text": "Collect the fuel carefully.\nFuel + 30\nSupplies - 25",
+  "Choice1Effects": {
+    "Fuel": 30,
+    "Supplies": -25
+  },
+  "Choice2Text": "Prioritize safety and move on.\nMorale - 5",
+  "Choice2Effects": {
+    "Morale": -5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Gravitational Tug-of-War",
+  "Body": "The complex gravitational interactions between the star and its planets are creating severe turbulence. Navigating through this system risks damage to your ship and could compromise your supply storage.",
+  "Choice1Text": "Navigate through for a shortcut.\nSupplies - 15\nFuel + 10",
+  "Choice1Effects": {
+    "Supplies": -15,
+    "Fuel": 10
+  },
+  "Choice2Text": "Take a longer, safer route.\nFuel - 15",
+  "Choice2Effects": {
+    "Fuel": -15
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Planetary Raid",
+  "Body": "A habitable planet in this system is home to a desperate colony. They're offering fuel in exchange for supplies, but the exchange seems risky.",
+  "Choice1Text": "Trade supplies for fuel.\nSupplies - 30\nFuel + 40",
+  "Choice1Effects": {
+    "Supplies": -30,
+    "Fuel": 40
+  },
+  "Choice2Text": "Decline the offer and move on.\nMorale - 10",
+  "Choice2Effects": {
+    "Morale": -10
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Echoes of the Past",
+  "Body": "As your ship approaches a dead star, you detect faint signals emanating from its core. These signals lead to valuable resource caches, but decoding them reveals unsettling truths about the star's demise.",
+  "Choice1Text": "Retrieve the resources.\nSupplies + 20\nMorale - 15",
+  "Choice1Effects": {
+    "Supplies": 20,
+    "Morale": -15
+  },
+  "Choice2Text": "Ignore the signals and move on.\nFuel - 10",
+  "Choice2Effects": {
+    "Fuel": -10
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Stellar Graveyard",
+  "Body": "Your ship enters a region filled with the remnants of multiple dead stars. The eerie sight affects the crew's spirits, but the area is rich in rare elements.",
+  "Choice1Text": "Collect the valuable elements.\nSupplies + 25\nMorale - 20",
+  "Choice1Effects": {
+    "Supplies": 25,
+    "Morale": -20
+  },
+  "Choice2Text": "Quickly pass through the region.\nFuel - 15",
+  "Choice2Effects": {
+    "Fuel": -15
+  }
+},
+{
+  "Type": "DeadStar",
+  "Title": "Whispers of the Void",
+  "Body": "Near a particularly ancient dead star, the crew begins to experience strange visions and hear whispers. These phenomena lead to hidden resource caches but take a toll on mental well-being.",
+  "Choice1Text": "Follow the visions to the resources.\nSupplies + 15\nMorale - 25",
+  "Choice1Effects": {
+    "Supplies": 15,
+    "Morale": -25
+  },
+  "Choice2Text": "Resist the visions and leave.\nFuel - 5",
+  "Choice2Effects": {
+    "Fuel": -5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Derelict Mining Station",
+  "Body": "In the asteroid belt, you discover an abandoned mining station. It's well-stocked but bears signs of a tragic event, casting a shadow over the crew's mood.",
+  "Choice1Text": "Salvage the station's supplies.\nSupplies + 30\nMorale - 20",
+  "Choice1Effects": {
+    "Supplies": 30,
+    "Morale": -20
+  },
+  "Choice2Text": "Leave the station untouched.\nFuel - 10",
+  "Choice2Effects": {
+    "Fuel": -10
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Asteroid Hive",
+  "Body": "You encounter a hollowed-out asteroid serving as a hive for mysterious space-dwelling creatures. Their bio-matter is resource-rich but harvesting it feels unethical.",
+  "Choice1Text": "Harvest the bio-matter.\nSupplies + 25\nMorale - 15",
+  "Choice1Effects": {
+    "Supplies": 25,
+    "Morale": -15
+  },
+  "Choice2Text": "Leave the hive undisturbed.\nMorale + 5",
+  "Choice2Effects": {
+    "Morale": 5
+  }
+},
+{
+  "Type": "Belt",
+  "Title": "Frozen Pioneers",
+  "Body": "Within the belt, you find a perfectly preserved ship of early space pioneers. Their supplies are intact, but disturbing their resting place weighs heavily on the crew.",
+  "Choice1Text": "Salvage the pioneers' supplies.\nSupplies + 20\nMorale - 25",
+  "Choice1Effects": {
+    "Supplies": 20,
+    "Morale": -25
+  },
+  "Choice2Text": "Honor their memory and move on.\nMorale + 10",
+  "Choice2Effects": {
+    "Morale": 10
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Forbidden Harvest",
+  "Body": "The M-class star you're approaching is surrounded by energy-rich plasma. Harvesting it would replenish your supplies but is considered taboo by some crew members.",
+  "Choice1Text": "Harvest the plasma.\nSupplies + 30\nMorale - 15",
+  "Choice1Effects": {
+    "Supplies": 30,
+    "Morale": -15
+  },
+  "Choice2Text": "Respect the taboo and move on.\nFuel - 10",
+  "Choice2Effects": {
+    "Fuel": -10
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Star's Siren Song",
+  "Body": "As you near the M-class star, the crew reports hearing a mesmerizing 'song'. Following it leads to resource-rich solar flares, but the experience is psychologically taxing.",
+  "Choice1Text": "Follow the 'song' to the flares.\nSupplies + 25\nMorale - 20",
+  "Choice1Effects": {
+    "Supplies": 25,
+    "Morale": -20
+  },
+  "Choice2Text": "Ignore the 'song' and maintain course.\nFuel - 5",
+  "Choice2Effects": {
+    "Fuel": -5
+  }
+},
+{
+  "Type": "MStar",
+  "Title": "Stellar Parasites",
+  "Body": "You discover microscopic life forms feeding off the M-class star's energy. They could serve as a potent power source, but harvesting them feels morally questionable.",
+  "Choice1Text": "Harvest the parasites.\nSupplies + 20\nMorale - 25",
+  "Choice1Effects": {
+    "Supplies": 20,
+    "Morale": -25
+  },
+  "Choice2Text": "Leave the ecosystem undisturbed.\nMorale + 5",
+  "Choice2Effects": {
+    "Morale": 5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Desperate Colony",
+  "Body": "You encounter a struggling colony on a harsh planet. They offer abundant supplies in exchange for your ship's spare parts, without which your journey becomes more perilous.",
+  "Choice1Text": "Accept the trade.\nSupplies + 30\nMorale - 20",
+  "Choice1Effects": {
+    "Supplies": 30,
+    "Morale": -20
+  },
+  "Choice2Text": "Decline and offer limited aid.\nSupplies - 10\nMorale + 5",
+  "Choice2Effects": {
+    "Supplies": -10,
+    "Morale": 5
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Quarantined World",
+  "Body": "One planet in the system is rich in resources but under quarantine due to a mysterious pathogen. Breaking quarantine could resupply your ship but risks contamination.",
+  "Choice1Text": "Break quarantine to resupply.\nSupplies + 25\nMorale - 15",
+  "Choice1Effects": {
+    "Supplies": 25,
+    "Morale": -15
+  },
+  "Choice2Text": "Respect the quarantine.\nFuel - 10",
+  "Choice2Effects": {
+    "Fuel": -10
+  }
+},
+{
+  "Type": "StarWithPlanets",
+  "Title": "Ancient Alien Cache",
+  "Body": "On a small moon, you discover a cache of highly advanced alien technology. Using it could greatly benefit your mission, but it goes against regulations and unsettles the crew.",
+  "Choice1Text": "Use the alien technology.\nSupplies + 20\nMorale - 25",
+  "Choice1Effects": {
+    "Supplies": 20,
+    "Morale": -25
+  },
+  "Choice2Text": "Report the find and leave it untouched.\nMorale + 10",
+  "Choice2Effects": {
+    "Morale": 10
+  }
+},
+{
+  "Type": "Earthlike",
+  "Title": "A New Home",
+  "Body": "And there, in the uncharted backwaters of the western spiral arm of the galaxy, you find a new home. Well done. You can carry on exploring as much as you like.",
+  "Choice1Text": "Finally. Home.",
+  "Choice1Effects": {
+    "Supplies": 100,
+    "Fuel": 100,
+    "Morale": 100
+  },
+  "Choice2Text": "Victory!",
+  "Choice2Effects": {
+    "Supplies": 100,
+    "Fuel": 100,
+    "Morale": 100
+  }
+}    
   ]

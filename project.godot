@@ -30,6 +30,10 @@ window/size/viewport_height=1080
 
 project/assembly_name="Project S"
 
+[editor]
+
+movie_writer/movie_file="M:/Project S/project-s/Video.avi"
+
 [global_group]
 
 Player="to reference the player easily in code"

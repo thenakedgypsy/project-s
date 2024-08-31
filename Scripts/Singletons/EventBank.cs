@@ -12,6 +12,8 @@ public partial class EventBank : Node
     public List<Event> BeltEvents;
     public List<Event> DeadStarEvents;
     public List<Event> MStarEvents;
+    public List<Event> SWPEvents;
+    public List<Event> EarthEvent;
 
 	
 	// Called when the node enters the scene tree for the first time.
@@ -48,11 +50,24 @@ public partial class EventBank : Node
             rand = random.Next(MStarEvents.Count);
             return MStarEvents[rand];
         }
+        if(type == "StarWithPlanets")
+        {
+            rand = random.Next(SWPEvents.Count);
+            return SWPEvents[rand];
+        }
+        if(type == "Earthlike")
+        {
+            rand = random.Next(EarthEvent.Count);
+            return EarthEvent[rand];
+        }
+        
         return null;
     }
 
     	public override void _Ready()
 	{
+        SWPEvents = new List<Event>();
+        EarthEvent = new List<Event>();
         BeltEvents = new List<Event>();
         DeadStarEvents = new List<Event>();
         MStarEvents = new List<Event>();
@@ -107,6 +122,14 @@ public partial class EventBank : Node
             {
                 MStarEvents.Add(newEvent);
             }
+            else if(currentEvent.Type == "StarWithPlanets")
+            {
+                SWPEvents.Add(newEvent);
+            }
+            else if(currentEvent.Type == "Earthlike")
+            {
+                EarthEvent.Add(newEvent);
+            }
             else
             {
                 GD.Print($"Event Type: {currentEvent.Type} does not exist. Unable to add event.");
@@ -114,5 +137,7 @@ public partial class EventBank : Node
         }
         GD.Print($"Loaded {DeadStarEvents.Count} deadstar events");
         GD.Print($"Loaded {BeltEvents.Count} belt events");
+        GD.Print($"Loaded {SWPEvents.Count} star with planet events");
+        GD.Print($"Loaded {EarthEvent.Count} earth  events");
     }
 }

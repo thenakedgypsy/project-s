@@ -10,10 +10,12 @@ public partial class EventWindow : CanvasLayer
 	public Button ButtonB;
 	public Choice ChoiceA;
 	public Choice ChoiceB;
+	private AudioStreamPlayer _clickSound;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_clickSound = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 		TitleLabel = GetNode<RichTextLabel>("Window/Title");
 		BodyLabel = GetNode<RichTextLabel>("Window/Body");
 		ButtonA = GetNode<Button>("ChoiceBackA/ChoiceButtonA");
@@ -62,12 +64,14 @@ public partial class EventWindow : CanvasLayer
 
 	public void ButtonAPressed()
 	{
+		_clickSound.Play();
 		ChoiceA.EnactChoice();
 		HideEventWindow();
 	}
 
 	public void ButtonBPressed()
 	{
+		_clickSound.Play();
 		ChoiceB.EnactChoice();
 		HideEventWindow();
 	}

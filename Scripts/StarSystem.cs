@@ -10,6 +10,7 @@ public partial class StarSystem : Area2D
 	private AnimatedSprite2D _systemSprite;
 	public bool IsScanned;
 	public PointLight2D Light;
+	public PointLight2D InitialLight;
 
 	[Signal]
 	public delegate void SystemSelectedEventHandler(Vector2 systemPosition, StarSystem self);
@@ -26,12 +27,13 @@ public partial class StarSystem : Area2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		InitialLight = GetNode<PointLight2D>("GreenLight");
 		IsScanned = false;
 		_systemSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		_mouseOver = false;	
 		Light = GetNode<PointLight2D>("PointLight2D");
 		Light.Color = Color.FromHtml("a8e2ec");
-		Light.Enabled = false;
+		//Light.Enabled = false;
 		ConnectToEventViewer();	
 	}
 
@@ -96,22 +98,30 @@ public partial class StarSystem : Area2D
 	{									//which will dictate which events it can roll
 		GD.Print("Generating a type for this star system...");
 		Random random = new Random();
-		int typeInt = random.Next(11); //0 - 10
+		int typeInt = random.Next(1,101); //0 - 10
 		GD.Print($"Random int for system type generation is: {typeInt}");
-		if(typeInt < 3)
+		if(typeInt < 24)
 		{
 			SetType("Belt");
 			GD.Print("Setting type to belt");
 		}
-		if(typeInt >= 3 && typeInt <= 5)
+		if(typeInt >= 24 && typeInt <= 49)
 		{
 			SetType("DeadStar");
 			GD.Print("Setting type to Dead Star");
 		}
-		if(typeInt > 5)
+		if(typeInt > 49 && typeInt <= 69)
 		{
 			SetType("MStar");
 			GD.Print("Setting type to MStar");
+		}
+		if(typeInt > 69 && typeInt < 95)
+		{
+			SetType("StarWithPlanets");
+		}
+		if(typeInt > 95)
+		{
+			SetType("Earthlike");
 		}
 		SetLightingByType();
 		ShowEvent();
@@ -119,6 +129,7 @@ public partial class StarSystem : Area2D
 
 	public void SetLightingByType()
 	{
+		InitialLight.Enabled = false;
 		Light.Enabled = true;
 		if(Type == "Belt")
 		{
@@ -135,6 +146,18 @@ public partial class StarSystem : Area2D
 			Light.Color = Color.FromHtml("d22800");
 			Light.Energy = 3;
 		}
+		if(Type == "StarWithPlanets")
+		{
+			Light.Color = Color.FromHtml("d22800");
+			Light.Energy = 2;
+		}
+		if(Type == "Earthlike")
+		{
+			Light.Color = Color.FromHtml("d22800");
+			Light.Energy = 0.2f;
+		}
+		
+
 	}
 
 	public void SetType(string type)		//sets the type and the sprite

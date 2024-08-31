@@ -28,6 +28,11 @@ public partial class Choice : Node
 				ResourceManager.Instance.AdjustMorale(change);
 				GD.Print($"Resource {resource} adjusted by a choice by {change}.");
 			}
+			else if(resource == "Supplies")
+			{
+				ResourceManager.Instance.AdjustSupplies(change);
+				GD.Print($"Resource {resource} adjusted by a choice by {change}.");
+			}			
 			else
 			{
 				GD.Print($"Resource {resource} not found to make change.");

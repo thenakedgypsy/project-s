@@ -11,10 +11,12 @@ public partial class ScanButton : Area2D
 	private Texture2D _unSelectedTexture;
 	private bool _justAppeared;
 	private StarSystem _attachedSystem;
+	private AudioStreamPlayer _clickSound;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_clickSound = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 		_justAppeared = false;
 		_mouseOver = false;
 		Visible = false;
@@ -75,6 +77,7 @@ public partial class ScanButton : Area2D
 
 	public void Clicked()
 	{
+		_clickSound.Play();
 		GD.Print("Scan clicked!");
 		Visible = false;
 		_attachedSystem.IsScanned = true;
